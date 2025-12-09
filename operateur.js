@@ -104,14 +104,14 @@ console.log(age4 <= ageMaximum);
 let village1 = "Passamainty";
 let commune1 = "Mamoudzou";
 // utilisation du signe de différence "!=" veut dire "différent de la valeur"
-console.log(villages != communes); // true car les deux chaines de caractères ne sont pas identiques
+console.log(village1 != commune1); // true car les deux chaines de caractères ne sont pas identiques
 
 
 // est-ce que la commune est strictement différente du village
 let village2 = "dembeni";
 let commune2 = "Dembeni";
 // utilisation du signe de différence stricte "!==" veut dire "strictement différent de la valeur et du type"
-console.log(commune !== village); // true car les deux chaines de caractères ne sont pas identiques à cause de la casse "dembeni" et "Dembeni"
+console.log(commune2 !== village2); // true car les deux chaines de caractères ne sont pas identiques à cause de la casse "dembeni" et "Dembeni"
 
 
 
