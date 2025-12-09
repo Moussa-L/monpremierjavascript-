@@ -25,10 +25,16 @@ console.log("J'ai " + age + " ans");
 
 // Déclaration de variables numériques
 let prix = 12;
+// différents types de nombres
+// nombre décimal qui contient un point
 const nombreDecimal =3.4123;
+// nombre négatif
 const nombreNegatif = -509;
-const nombreFractionnaire = 1/3; 
+// nombre fractionnaire on divise 1 par 3
+const nombreFractionnaire = 1/3;
+// Affichage des variables numériques dans la console 
 console.log(prix, nombreDecimal, nombreNegatif, nombreFractionnaire);
+// Autre façon d'afficher les variables numériques dans la console
 console.log(prix);
 console.log(nombreDecimal);
 console.log( nombreNegatif);
