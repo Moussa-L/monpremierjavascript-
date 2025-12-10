@@ -87,7 +87,7 @@ console.log(joueurprofessionnel.dateDeNaissance);
 console.log(joueurprofessionnel.piedfort);
 
 // Déclaration d'un objet représentant un homme politique
-let hommepolitique= {
+let ticketCinema= {
     nom: "Mansour Kamardine",
     nationalité: "Française",
     dateDeNaissance: "23/03/1959" ,
