@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+     <link href="calcul_age.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <!--titre de mon formulaire-->
+      <h2> Formulaire d'inscptions </h2>
+
+
+    <!--la balise qui encadre tous les champs du formulaire 
+    (inputs, boutons…).-->
+    <form>
+
+    <div >
+        <!--nom des cases-->
+        <label for="nom">Nom :</label>
+        <!--insertions de text-->
+        <input type="text" name="nom" id="nom" >
+
+        <!--nom des cases-->
+        <label for="prénom">Prénom(s) :</label>
+
+        <!--insertions de text-->
+        <input type="text" name=prénom id="prénom" > 
+    </div> <br><br>
+
+
+<label for ="Situation"> Situation :</label>
+        
+        <br><br>
+
+    <select>
+
+        
+    <option>Etudiant</option>
+
+    <option>Salarié</option>
+    
+    </select> <br><br>
+
+    <label for="Année de naissance">Année de naissance :</label>
+<input type="number" id="Année de naissance" placeholder="2000" oninput="calculateAge()">
+
+    
+        <p>Âge : <span id="age"></span></p>
+
+<script>
+function calculateAge() {
+    const year = document.getElementById("Année de naissance").value;
+    const currentYear = new Date().getFullYear();
+    
+    if (year) {
+        document.getElementById("age").textContent = currentYear - year;
+    } else {
+        document.getElementById("age").textContent = "";
+    }
+}
+</script>
+
+
+    
+</body>
+</html>
