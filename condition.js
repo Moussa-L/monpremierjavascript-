@@ -49,3 +49,4 @@ if (pointPermis == 12) {
 else{
     alert("Vous avez des malus!");
 };
+

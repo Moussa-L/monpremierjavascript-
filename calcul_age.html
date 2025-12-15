@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire</title>
      <link href="calcul_age.css" rel="stylesheet">
+     <script src="dom_calcul_age.js" defer></script>
 
 </head>
 <body>
@@ -16,7 +17,11 @@
     <!--la balise qui encadre tous les champs du formulaire 
     (inputs, boutons…).-->
     <form>
-
+    <div>
+        <p id="paragraphe1">
+            Hello!
+        </p>
+    </div>
     <div >
         <!--nom des cases-->
         <label for="nom">Nom :</label>
@@ -50,18 +55,8 @@
     
         <p>Âge : <span id="age"></span></p>
 
-<script>
-function calculateAge() {
-    const year = document.getElementById("Année de naissance").value;
-    const currentYear = new Date().getFullYear();
-    
-    if (year) {
-        document.getElementById("age").textContent = currentYear - year;
-    } else {
-        document.getElementById("age").textContent = "";
-    }
-}
-</script>
+        
+<input type="button" value="Valider" id="butonValider">
 
 
     
