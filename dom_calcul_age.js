@@ -57,4 +57,31 @@ for (let i = 0; i < elementClassCommune.length; i++) {
     console.log(elementClassCommune[i].textContent);
 }
 
+//je crée un élement (balise) nommé <section>
+let elementSection = document.createElement("section");
 
+// Je récupère la balise <body> , puis je stocke <body> dans la variable elementbody
+let elementBody = document.querySelector ('body');
+elementBody.appendChild(elementSection);
+let nouveauTitre = document.createElement("h3");
+nouveauTitre.textContent = "Mon titre de la section";
+elementSection.appendChild(nouveauTitre);
+
+
+let elementMaman = document.createElement('maman');
+
+
+elementBody.appendChild(elementMaman);
+let titreDeNiveau3= document.createElement("h3");
+titreDeNiveau3.textContent= "Bonjour Maman";
+
+elementMaman.appendChild(titreDeNiveau3);
+
+
+let elementImg = document.createElement("img");
+
+elementImg.src = "SINGULARITY.jpg";
+elementImg.setAttribute("alt","mon oiseau pecheur");
+elementImg.className="image-tigre";
+elementImg.classList.add("image","image3");
+elementBody.appendChild(elementImg);
