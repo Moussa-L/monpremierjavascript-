@@ -1,8 +1,9 @@
-// je programmes les événement qui sont déclanchés du cpoté html 
+  
 //je recupere l'element dont la variable 
 const elementBoutonValiderDate = document.querySelector("#validerDate");
 
 const elementSpanDateDuJourFormat2 = document.querySelector("#dateDuJourFormat2");
+
 
 //elementBoutonValiderDate.addEventListener ("click",function() {
 
@@ -19,8 +20,38 @@ console.log("ma date",maDate);
       
     elementBoutonValiderDate.innerHTML = maDate;
 
-    elementSpanDateDuJourFormat2.textConetent = maDate.toLocaleDateString();
+    elementSpanDateDuJourFormat2.textConetent = maDate.toLocaleDateString(); 
 
+ 
+ 
 });
-   
 
+ //mon evenement "KEYDOWN"
+ 
+ let elementBoutonFonctionFleche = document.querySelector("#buttonFleche");
+  
+ elementBoutonFonctionFleche.addEventListener("keydown", (event)=> {
+
+    console.log("====Je suis dans l'événement====");
+    console.log("Clée event:", event.key)
+ });
+
+ let elementInputNomForm = document.querySelector("#nom");
+
+
+ elementInputNomForm.addEventListener("change",(event)=>{
+     console.log(event.target.value);
+ });
+
+let messageSalutation;
+
+let elementSpanNomUtilisateur = document.querySelector("#nomUtilisateur");
+
+ elementInputNomForm.addEventListener("change",(event)=>{
+
+    console.log(event.target.value);
+
+    messageSalutation = 'Bonjour ${event.target.value}';
+
+    elementSpanNomUtilisateur.textContent = messageSalutation;
+ });

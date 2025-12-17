@@ -8,11 +8,15 @@
      <script src="dom_calcul_age.js" defer></script>
      <script src="evenement.js" defer></script>
 
+
 </head>
 <body>
 
-    
+
+   
 <article>
+
+
 
 
     <div id="date" class="date">
@@ -23,12 +27,15 @@
             <span id="dateDuJourFormat2"></span>
         </p>
     </div>
-
-    <!--titre de mon formulaire-->
+<div id="fonctionFleche"></div>
+<button id="buttonFleche"> Fontcion Flêchée</button>
+<!--titre de mon formulaire-->
       <h2> Formulaire d'inscptions </h2>
 
 
-    <!--la balise qui encadre tous les champs du formulaire 
+
+
+    <!--la balise qui encadre tous les champs du formulaire
     (inputs, boutons…).-->
     <h3 id="Communes"></h3>
     <ol id="listCommunes">
@@ -50,9 +57,12 @@
         <li class="commune">dzaoudzi</li>
         <li class="commune">ouangani</li>
     </ol>
-</article> 
+</article>
 <section>
     <form>
+
+
+
 
 
 
@@ -67,38 +77,50 @@
         <!--insertions de text-->
         <input type="text" name="nom" id="nom" >
 
+
         <!--nom des cases-->
         <label for="prénom">Prénom(s) :</label>
 
+
         <!--insertions de text-->
-        <input type="text" name=prénom id="prénom" > 
+        <input type="text" name=prénom id="prénom" >
     </div> <br><br>
 
 
+
+
 <label for ="Situation"> Situation :</label>
-        
+       
         <br><br>
+
 
     <select>
 
-        
+
+       
     <option>Etudiant</option>
 
+
     <option>Salarié</option>
-    
+   
     </select> <br><br>
+
 
     <label for="Année de naissance">Année de naissance :</label>
 <input type="number" id="Année de naissance" placeholder="2000" oninput="calculateAge()">
 
-    
+
+   
         <p>Âge : <span id="age"></span></p>
 
-        
+
+       
 <input type="button" value="Valider" id="butonValider">
 <!--J'insere ici une section en utilisant la DOM côté Javascript -->
 
+
 </section>
-    
+   
 </body>
 </html>
+
