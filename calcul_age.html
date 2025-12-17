@@ -6,9 +6,23 @@
     <title>Formulaire</title>
      <link href="calcul_age.css" rel="stylesheet">
      <script src="dom_calcul_age.js" defer></script>
+     <script src="evenement.js" defer></script>
 
 </head>
 <body>
+
+    
+<article>
+
+
+    <div id="date" class="date">
+        <button id="validerDate">Date du jour</button>
+        <span id ="dateDuJour"></span>
+        <br>
+        <p>
+            <span id="dateDuJourFormat2"></span>
+        </p>
+    </div>
 
     <!--titre de mon formulaire-->
       <h2> Formulaire d'inscptions </h2>
@@ -36,6 +50,8 @@
         <li class="commune">dzaoudzi</li>
         <li class="commune">ouangani</li>
     </ol>
+</article> 
+<section>
     <form>
 
 
@@ -82,7 +98,7 @@
 <input type="button" value="Valider" id="butonValider">
 <!--J'insere ici une section en utilisant la DOM côté Javascript -->
 
-
+</section>
     
 </body>
 </html>
