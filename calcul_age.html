@@ -1,122 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulaire</title>
-     <link href="calcul_age.css" rel="stylesheet">
+    
+    <link href="calcul_age.css" rel="stylesheet">
      <script src="dom_calcul_age.js" defer></script>
      <script src="evenement.js" defer></script>
-
-
 </head>
+
 <body>
+    <article>
+        <div id="date" class="date">
+            <button id="validerDate">Date du jour</button>
+            <span id="dateDuJour"></span>
+            <p>
+                Date au format local :
+                <span id="dateDuJourFormat2"></span>
+            </p>
+        </div>
 
+        <div id="fonctionFiche">
+            <button id="buttonFleche"> Fontcion Flêchée</button>
+        </div>
 
-   
-<article>
+        <div id="titreFiche">
+            <h2>Formulaire d'inscription</h2>
+        </div>
 
+        <!-- la balise ul encadre tous les champs du formulaire -->
+            <h3 id="Communes"></h3>
+        <ol class="listCommunes">
 
+                <li class="commune">Tsingoni</li>
+                <li class="commune">Pamandzi</li>
+                <li class="commune">Sada</li>
+                <li class="commune">Acoua</li>
+                <li class="commune">koungou</li>
+                <li class="commune">Bouéni</li>
+                <li class="commune">Mamoudzou</li>
+                <li class="commune">bandraboua</li>
+                <li class="commune">Mtsamboro</li>
+                <li class="commune">bandrele</li>
+                <li class="commune">Mtsamgamouji</li>
+                <li class="commune">dembeni</li>
+                <li class="commune">Kani-keli</li>
+                <li class="commune">Dzaoudzi</li>
+                <li class="commune">Chiconi</li>
+                <li class="commune">dzaoudzi</li>
+                <li class="commune">ouangani</li>
 
+        </ol>
 
-    <div id="date" class="date">
-        <button id="validerDate">Date du jour</button>
-        <span id ="dateDuJour"> </span>
-        <br>
-        <p>
-            Date au format local:
-            <span id="dateDuJourFormat2"></span>
-        </p>
-    </div>
-<div id="fonctionFleche"></div>
-<button id="buttonFleche"> Fontcion Flêchée</button>
-<!--titre de mon formulaire-->
-      <h2> Formulaire d'inscptions </h2>
+        <section>
+            <div>
+                <span id="paragraphe1">
+                    <b>Mot clé :</b>
+                    <span id="nomUtilisateur"></span>
+                </span>
+            </div>
 
+            <form>
+                <label for="nom">Nom :</label><br>
+                <input type="text" name="nom" id="nom"><br><br>
 
+                <label for="prenom">Prénom :</label><br>
+                <input type="text" name="prenom" id="prenom"><br><br>
 
+                <label for="Situation">Situation :</label><br>
+                <select>
+                    <option id="choix">Étudiant</option>
+                    <option id="choix">Salarié</option>
+                </select><br><br>
 
-    <!--la balise qui encadre tous les champs du formulaire
-    (inputs, boutons…).-->
-    <h3 id="Communes"></h3>
-    <ol id="listCommunes">
-        <li class="commune">Tsingoni</li>
-        <li class="commune">Pamandzi</li>
-        <li class="commune">Sada</li>
-        <li class="commune">Acoua</li>
-        <li class="commune">koungou</li>
-        <li class="commune">Bouéni</li>
-        <li class="commune">Mamoudzou</li>
-        <li class="commune">bandraboua</li>
-        <li class="commune">Mtsamboro</li>
-        <li class="commune">bandrele</li>
-        <li class="commune">Mtsamgamouji</li>
-        <li class="commune">dembeni</li>
-        <li class="commune">Kani-keli</li>
-        <li class="commune">Dzaoudzi</li>
-        <li class="commune">Chiconi</li>
-        <li class="commune">dzaoudzi</li>
-        <li class="commune">ouangani</li>
-    </ol>
-</article>
-<section>
-    <form>
+                <label for="Année de naissance">Année de naissance :</label><br>
+                <input type="number" id="Année de naissance" placeholder="2000" oninput="calculateAge()"><br><br>
 
-    <div>
-        <p id="paragraphe1">
-            Hello! <span id="nomUtilisateur"></span>
-        </p>
-    </div>
-    <div >
-        <!--nom des cases-->
-        <label for="nom">Nom :</label>
-        <!--insertions de text-->
-        <input type="text" name="nom" id="nom" >
+                <p>Âge : <span id="age"></span></p>
 
-
-        <!--nom des cases-->
-        <label for="prénom">Prénom(s) :</label>
-
-
-        <!--insertions de text-->
-        <input type="text" name=prénom id="prenom" >
-    </div> <br><br>
-
-
-
-
-<label for ="Situation"> Situation :</label>
-       
-        <br><br>
-
-
-    <select>
-
-
-       
-    <option>Etudiant</option>
-
-
-    <option>Salarié</option>
-   
-    </select> <br><br>
-
-
-    <label for="Année de naissance">Année de naissance :</label>
-<input type="number" id="Année de naissance" placeholder="2000" oninput="calculateAge()">
-
-
-   
-        <p>Âge : <span id="age"></span></p>
-
-
-       
-<input type="button" value="Valider" id="butonValider">
-<!--J'insere ici une section en utilisant la DOM côté Javascript -->
-
-
-</section>
-   
+                <input type="submit" checked="Valider" id="butonValider">
+            </form>
+        </section>
+    </article>
 </body>
 </html>
+
 
