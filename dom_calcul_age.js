@@ -85,3 +85,5 @@ elementImg.setAttribute("alt","mon oiseau pecheur");
 elementImg.className="image-tigre";
 elementImg.classList.add("image","image3");
 elementBody.appendChild(elementImg);
+
+// elementInputNom.addEventListener 
