@@ -62,3 +62,12 @@ let elementSpanNomUtilisateur = document.querySelector("#nomUtilisateur");
 
     elementSpanNomUtilisateur.textContent = messageSalutation;
  });
+
+ let elementForm = document.querySelector('form');
+
+ elementForm.addEventListener("submit",(event) => {
+   event.preventDefault();
+   console.log("#### Je suis l'événement Submit du formulaire ");
+   const nom = document.querySelector("#nom").value;
+   console.log("NOM saisi:" , nom);
+ })
