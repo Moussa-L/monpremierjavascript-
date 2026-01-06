@@ -88,5 +88,18 @@ elementImg.className="image-tigre";
 elementImg.classList.add("image","image3");
 elementBody.appendChild(elementImg);
 
-// elementInputNom.addEventListener 
+
+const date = new Date();
+console.log("Ma date :",date);
+
+
+let aneeEnCours = date.getFullYear();
+console.log("Année en cours :",aneeEnCours);
+
+let moisEnCours = date.getMonth();
+console.log("Mois en cours :",moisEnCours);
+
+let jourEnCours = date.getDate();
+console.log("Jour en cours :",jourEnCours);
+
 
