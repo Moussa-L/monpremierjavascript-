@@ -75,8 +75,10 @@ elementForm.addEventListener("submit",(event) => {
       console.log("#### Je suis l'événement Submit du formulaire ");
       const nom = document.querySelector("#nom").value;
       const prenom = document.querySelector("#prenom").value;
+      const age = document.querySelector("#age").value;
 
       
       console.log("NOM saisi:" , nom);
       console.log("PRENOM saisi:" , prenom);
+      console.log("AGE saisi:" , age);
 });

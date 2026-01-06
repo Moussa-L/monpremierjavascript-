@@ -1,13 +1,15 @@
 
-// function calculateAge() {
-//     const year = document.getElementById("Année de naissance").value;
-//     const currentYear = new Date().getFullYear();
-    
-//     if (year) {
-//         document.getElementById("age").textContent = currentYear - year;
-//     } else {
-//         document.getElementById("age").textContent = "";
-//     }
+function calculateAge() {
+    const year = parseInt(document.getElementById("annee_naissance").value);
+    const currentYear = new Date().getFullYear();
+
+    if (!isNaN(year)) {
+        document.getElementById("age").textContent = currentYear - year;
+    } else {
+        document.getElementById("age").textContent = "";
+    }
+};
+
 
 
 // Récupère le bouton ayant l'id "boutonValider" et le stocke dans une variable
