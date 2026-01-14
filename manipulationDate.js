@@ -1,30 +1,55 @@
-        console.log("### Je suis dans l'événement date ###");
+console.log("### Application Horloges initialisée ###");
 
-const maDate2 = new Date();
+/* =========================
+   DATE
+   ========================= */
+const maintenant = new Date();
 
-const anneeEnCours = new Date().getFullYear();
+const moisFrancais = [
+    "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
+    "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"
+];
 
-let elementSpanAnee = document.querySelector("#annee");
-elementSpanAnee.textContent = anneeEnCours;
+document.querySelector("#annee").textContent = maintenant.getFullYear();
+document.querySelector("#mois").textContent = moisFrancais[maintenant.getMonth()];
 
-let elementSpanMois = document.querySelector("#mois");
-elementSpanMois.textContent = maDate2.getMonth();
+document.querySelector("#dateJour").textContent =
+    maintenant.toLocaleDateString("fr-FR", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        year: "numeric"
+    });
 
-function afficherHeureParis() {
-  const maintenant = new Date();
+/* =========================
+   HORLOGES
+   ========================= */
+const horloges = [
+    { id: "#horlogeParis", zone: "Europe/Paris" },
+    { id: "#horlogeTokyo", zone: "Asia/Tokyo" },
+    { id: "#horlogeMayotte", zone: "Indian/Mayotte" }
+];
 
-  const heureParis = new Intl.DateTimeFormat("fr-FR", {
-    timeZone: "Europe/Paris",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit"
-  }).format(maintenant);
-
-  document.querySelector("#horlogeParis").textContent = heureParis;
+function formaterHeure(zone) {
+    return new Intl.DateTimeFormat("fr-FR", {
+        timeZone: zone,
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit"
+    }).format(new Date());
 }
 
-// mise à jour chaque seconde
-setInterval(afficherHeureParis, 1000);
+function mettreAJourHeures() {
+    document.querySelector("#heureLocal").textContent =
+        new Date().toLocaleTimeString("fr-FR");
 
-// affichage immédiat
-afficherHeureParis();
+    horloges.forEach(({ id, zone }) => {
+        const element = document.querySelector(id);
+        if (element) {
+            element.textContent = formaterHeure(zone);
+        }
+    });
+}
+
+mettreAJourHeures();
+setInterval(mettreAJourHeures, 1000);

@@ -1,41 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Date</title>
-  <link rel="stylesheet" href="manipulationDate.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horloges Mondiales</title>
+
+    <link rel="stylesheet" href="manipulationDate.css">
 </head>
+
 <body>
 
-  
-  
-  <div id="date">
-    <p>
-    <span id="annee"></span>
-    </p>
+    <header class="app-header">
+        <h1>Horloges & Date</h1>
+        <p>Heure locale et fuseaux horaires mondiaux</p>
+    </header>
 
-    <p>
-        <span id="mois"></span>
-    </p>
-  </div>
+    <main class="container">
 
-  <div id="date">
-    <p>Date complet
-        <span id="dateJour"></span>
-    </p>
+        <!-- Carte Date -->
+        <section class="clock-card">
+            <h2>Date actuelle</h2>
 
-    <hr>
+            <p class="clock-value">
+                <span id="annee"></span>
+            </p>
 
-    <p>
-        <span id="heureLocal"></span>
-    </p>
+            <p class="clock-subvalue">
+                <span id="mois"></span>
+            </p>
+        </section>
 
-    <p>Heure à Paris : <span id="horlogeParis"></span></p>
+        <!-- Carte Horloges -->
+        <section class="clock-card">
+            <h2>Heures mondiales</h2>
 
-  </div>
+            <p class="clock-value">
+                <span id="dateJour"></span>
+            </p>
 
+            <p class="clock-subvalue">
+                <span id="heureLocal"></span>
+            </p>
+
+            <ul class="clock-list">
+                
+                <li>🇯🇵 Tokyo <span id="horlogeTokyo"></span></li>
+                <li>🇾🇹 Mayotte <span id="horlogeMayotte"></span></li>
+                <li>🇫🇷 Paris <span id="horlogeParis"></span></li>
+                
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="app-footer">
+        <p>© 2026 — Projet JavaScript Date & Time</p>
+    </footer>
+
+    <script src="manipulationDate.js" defer></script>
 </body>
-
-<script src="manipulationDate.js" defer></script>
 </html>
